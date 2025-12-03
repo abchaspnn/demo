@@ -1,6 +1,7 @@
 #FROM openjdk:8-jdk-alpine
-FROM amazoncorretto:17
-ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
-
-COPY ${JAR_FILE} app.jar
+FROM eclipse-temurin:17-jdk-alpine
+RUN apk add curl
+VOLUME /tmp
+EXPOSE 8080
+ADD target/demo-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
