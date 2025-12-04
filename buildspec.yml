@@ -31,7 +31,7 @@ phases:
     - echo $Docker_CONTAINER_NAME
     - echo printing imagedefinitions.json
     - cat imagedefinitions.json
-artifacts:
- files:
-  - imagedefinitions.json
-  - target/demo-0.0.1-SNAPSHOT.jar
+ artifacts:
+  files:
+   - imagedefinitions.json
+   - target/demo-0.0.1-SNAPSHOT.jar
