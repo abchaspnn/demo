@@ -17,7 +17,7 @@ phases:
     - echo docker tag  $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
     - mvn clean install
     - echo Building the Docker image..
-    - docker build -t demo-h2-2 
+    - docker build -t demo-h2-2 . 
     - docker tag demo-h2-2:latest 876690758121.dkr.ecr.us-east-1.amazonaws.com/fsm-repository
     - docker images
  post_build:
