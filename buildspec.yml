@@ -16,6 +16,7 @@ phases:
     - echo REPOSITORY_URI:latest $REPOSITORY_URI:latest
     - echo docker tag  $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
     - mvn clean install
+    - ls
     - echo Building the Docker image..
     - docker build -t fsm-repository .
     - docker images 
